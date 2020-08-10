@@ -16,7 +16,6 @@ def decrypt():
         user_string_list = user_string_lower.split()
 
         shift_amount = 1  
-        i = 0
         print(user_string_list)
 
         for i in range(1, 26):
