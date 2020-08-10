@@ -15,19 +15,19 @@ def decrypt():
         user_string_lower = user_string.lower()
         user_string_list = user_string_lower.split()
 
-        shift_amount = 1
-        WORD = 0    
+        shift_amount = 1  
         i = 0
         print(user_string_list)
 
         for i in range(1, 26):
-                secret_decrypt = "".join([alphabet[(alphabet.find(c)-shift_amount)%26] for c in user_string_list[WORD]])
+                secret_decrypt_one = "".join([alphabet[(alphabet.find(c)-shift_amount)%26] for c in user_string_list[0]])
+                secret_decrypt_two = "".join([alphabet[(alphabet.find(c)-shift_amount)%26] for c in user_string_list[1]])
+   
                 shift_amount = shift_amount + 1
                 print("decrypting with a shift key of", (shift_amount - 1))
-                print(secret_decrypt)
+                print(secret_decrypt_one, secret_decrypt_two)
                 print(" ")
                 time.sleep(0.5)
-
 
 
 
